@@ -31,10 +31,7 @@
     "app/projects/[[...mdxPath]]/page.jsx",
     "mdx-components.js",
     "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "content/blog/page.mdx",
-    "components/ThemeToggle.jsx",
-    "components/ThemeProvider.jsx"
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }

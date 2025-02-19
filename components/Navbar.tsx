@@ -2,9 +2,19 @@
 
 import { Navbar as NextraNavbar, useTheme } from "nextra-theme-docs";
 import { Sun, MoonStar } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
 
   const ThemeIcon = theme === "light" ? MoonStar : Sun;
 
