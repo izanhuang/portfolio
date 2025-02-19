@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "izanhuang",
   "version": "0.0.1",
   "description": "Izan Huang's Portfolio",
   "scripts": {
@@ -7,6 +7,15 @@
     "build": "next build",
     "start": "next start"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/izanhuang/portfolio.git"
+  },
+  "author": "Izan Huang <huang.izan@gmail.com",
+  "bugs": {
+    "url": "https://github.com/izanhuang/portfolio/issues"
+  },
+  "homepage": "https://github.com/izanhuang/portfolio#readme",
   "license": "MIT",
   "dependencies": {
     "next": "^15.1.4",

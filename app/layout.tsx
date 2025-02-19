@@ -24,7 +24,12 @@ const banner = <Banner storageKey="some-key">Banner</Banner>;
 const navbar = (
   <Navbar
     logo={<b>Izan Huang</b>}
-    projectLink="https://github.com/izanhuang/portfolio"
+    projectLink="https://github.com/izanhuang"
+    children={
+      <button onClick={setTheme(theme === "light" ? "dark" : "light")}>
+        Change theme
+      </button>
+    }
   />
 );
 const footer = <Footer>Izan Huang © {new Date().getFullYear()}</Footer>;
@@ -40,6 +45,7 @@ export default async function RootLayout({
       // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Layout
+          darkMode={true}
           banner={banner}
           navbar={navbar}
           pageMap={await getPageMap()}
