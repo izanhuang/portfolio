@@ -1,6 +1,9 @@
 export default {
   "*": {
     type: "page",
+    theme: {
+      footer: false,
+    },
   },
   index: {
     display: "hidden",
