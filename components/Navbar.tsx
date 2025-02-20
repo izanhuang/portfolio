@@ -22,12 +22,20 @@ export default function Navbar() {
     setTheme(theme === "light" ? "dark" : "light");
   }
 
+  const Logo = (
+    <div className="transition-all ease-in-out flex gap-2 hover:gap-4 font-bold">
+      <span className="text-pink-500">[</span>
+      <span className="hover:text-pink-500 transition-colors">Izan</span>
+      <span className="text-pink-500">]</span>
+    </div>
+  );
+
   return (
     <NextraNavbar
-      logo={<b>Izan Huang</b>}
+      logo={Logo}
       projectLink="https://github.com/izanhuang"
       children={
-        <button onClick={setCurrentTheme}>
+        <button className="hover:cursor-pointer" onClick={setCurrentTheme}>
           <ThemeIcon />
         </button>
       }

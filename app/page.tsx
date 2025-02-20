@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Button } from "nextra-theme-docs";
 
 export default function Home() {
   return (
