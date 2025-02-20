@@ -1,5 +1,5 @@
 {
-  "name": "izanhuang",
+  "name": "portfolio",
   "version": "0.0.1",
   "description": "Izan Huang's Portfolio",
   "scripts": {
@@ -26,7 +26,8 @@
     "postcss": "^8.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwindcss": "^4.0.7"
+    "tailwindcss": "^4.0.7",
+    "vercel": "^41.1.4"
   },
   "devDependencies": {
     "@types/node": "22.13.4",
