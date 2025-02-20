@@ -28,10 +28,10 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    "app/projects/[[...mdxPath]]/page.jsx",
     "mdx-components.js",
     "next-env.d.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "decs.d.ts"
   ],
   "exclude": ["node_modules"]
 }
