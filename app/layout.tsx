@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Footer, Layout } from "nextra-theme-docs";
-import { Banner } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
 import "nextra-theme-docs/style.css";
 import "@/styles/globals.css";
@@ -16,7 +15,6 @@ export default async function RootLayout({
     description: "Izan Huang's portfolio",
   };
 
-  const banner = <Banner storageKey="some-key">Banner</Banner>;
   const navbar = <Navbar />;
   const footer = <Footer>Izan Huang © {new Date().getFullYear()}</Footer>;
 
@@ -25,7 +23,6 @@ export default async function RootLayout({
       <body>
         <Layout
           darkMode={false}
-          banner={banner}
           navbar={navbar}
           pageMap={await getPageMap()}
           docsRepositoryBase="https://github.com/izanhuang/portfolio"

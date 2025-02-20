@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
-aside {
-  background-color: var(--x-color-white);
+html.dark {
+  --x-color-nextra-bg: var(--x-color-black);
+}
+
+html.light {
+  --x-color-nextra-bg: var(--x-color-white);
 }
