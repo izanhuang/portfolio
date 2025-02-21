@@ -4,12 +4,31 @@ import { Navbar as NextraNavbar, useTheme } from "nextra-theme-docs";
 import { Sun, MoonStar } from "lucide-react";
 import { useEffect, useState } from "react";
 
+declare global {
+  interface Window {
+    pagefind: any;
+  }
+}
+
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
+    async function loadPageFind() {
+      if (typeof window.pagefind === "undefined") {
+        try {
+          window.pagefind = await import(
+            // @ts-expect-error pagefind.js generated after build
+            /* webpackIgnore: true */ "../../../../_pagefind/pagefind.js"
+          );
+        } catch (e) {
+          window.pagefind = { search: () => ({ results: [] }), izan: () => {} };
+        }
+      }
+    }
+    loadPageFind();
   }, []);
 
   if (!isMounted) {
