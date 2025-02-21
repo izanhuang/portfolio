@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+:root {
+  --primary-color: #f6339a;
+
+  --nextra-primary-hue: 328.3deg;
+  --nextra-primary-saturation: 91.5%;
+  --nextra-primary-lightness: 58.2%;
+}
+
 html.dark {
   --x-color-nextra-bg: var(--x-color-black);
 }
